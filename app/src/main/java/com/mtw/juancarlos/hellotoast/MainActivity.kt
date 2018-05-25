@@ -15,12 +15,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    //TODO: 4.1 Add an Onclick event showToast
     fun showToast(view: View){
+        //TODO: 4.2 Show toast when button is clicked. Extract toast_message
             val mytoast: Toast = Toast.makeText(this,getString(R.string.toast_message),Toast.LENGTH_LONG)
             mytoast.show()
     }
 
+    //TODO: 4.1 Add an Onclick event coutUp
     fun countUp(view: View){
+        //TODO: 4.3 Increase the count in the text View when count button is clicked
         mCount++
         show_count.text = mCount.toString()
 
