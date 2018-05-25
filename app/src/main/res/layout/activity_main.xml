@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: 2.2 Change ViewGroup to LinearLayout -->
+<!-- TODO: 2.2 Change LinearLayout to Vertical -->
+<!-- TODO: 2.3 Add views to LinearLayout Button, Text, Button  -->
+<!-- TODO: 2.3 Set property text Text Button.text =Toast , Text.text=0, Button.text = count -->
+<!-- TODO: 2.3 Set id Button.id =button_toast , Text.id=show_count, Button.id = button_count  -->
+<!-- TODO: 3.1 Examine LinearLayout properties layout_width="match_parent" layout_height="match_parent" orientation="vertical"-->
+<!-- TODO: 3.2 Extract String resources button_label_toast = Hello Toast!  -->
+<!-- TODO: 3.2 Extract String resources count_initial_value = 0  -->
+<!-- TODO: 3.2 Extract String resources button_label_count = Count  -->
+<!-- TODO: 3.3 Resize set LinearLayout maring = 16dp and extract dimension dimens.xml  -->
+<!-- TODO: 3.4 Set Colors and backgrounds -->
+<!-- TODO: 3.4 Set textSize = 160sp textView show_count -->
+<!-- TODO: 3.4 extract 160sp count_text_size to dimens -->
+<!-- TODO: 3.4 Set textStyle = bold textView -->
+<!-- TODO: 3.4 Set textColor = colorPrimary textView -->
+<!-- TODO: 3.4 Set both buttons backgroud = colorPrimary -->
+<!-- TODO: 3.4 Set both buttons textColor = android white -->
+<!-- TODO: 3.4 Set backgroud = FFF043 to textView and pickup Color Chooser-->
+<!-- TODO: 3.4 Extract myBackgroundColor = FFF043 -->
+<!-- TODO: 3.5 Gravity and Weight -->
+<!-- TODO: 3.5 Center text show_count TextView horizontal and vertical gravity = center-->
+<!-- TODO: 3.5 Set Layout_Weight = 2 to textView -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/button_label_toast"
+        android:onClick="showToast"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:background="@color/myBackGroudColor"
+        android:gravity="center"
+        android:text="@string/count_initial_value"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/count_text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/button_label_count"
+        android:onClick="countUp"
+        android:textColor="@android:color/white" />
+</LinearLayout>
